@@ -222,10 +222,6 @@ public class Exercice1 extends javax.swing.JFrame {
         jTextAreaObservation.setText(jTextAreaObservation.getText()+"\n"+"Vous venez d'enfoncer le Bouton 1");
     }//GEN-LAST:event_jButtonBouton1ActionPerformed
 
-    private void jTextFieldSaisieFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSaisieFocusGained
-        jTextAreaObservation.setText(jTextAreaObservation.getText()+"\n"+"Vous venez de déplacer le curseur dans la zone de saisie de texte");
-    }//GEN-LAST:event_jTextFieldSaisieFocusGained
-
     private void jTextFieldSaisieKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSaisieKeyTyped
         jTextAreaObservation.setText(jTextAreaObservation.getText()+"\n"+"Vous venez de taper la touche "+evt.getKeyChar()+" dans la zone de saisie de texte");
     }//GEN-LAST:event_jTextFieldSaisieKeyTyped
@@ -253,6 +249,10 @@ public class Exercice1 extends javax.swing.JFrame {
             jTextAreaObservation.setText(jTextAreaObservation.getText()+"\n"+"Vous venez de décocher la Case numéro 2");
         }
     }//GEN-LAST:event_jCheckBoxCase2ActionPerformed
+
+    private void jTextFieldSaisieFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSaisieFocusGained
+        jTextAreaObservation.setText(jTextAreaObservation.getText()+"\n"+"Vous venez de déplacer le curseur dans la zone de saisie de texte");
+    }//GEN-LAST:event_jTextFieldSaisieFocusGained
 
     /**
      * @param args the command line arguments
