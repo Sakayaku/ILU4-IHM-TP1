@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JDialog" name="jDialogFileChooser">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[598, 347]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jFileChooserFichierImprimer" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jFileChooserFichierImprimer" min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JFileChooser" name="jFileChooserFichierImprimer">
+          <Properties>
+            <Property name="dialogTitle" type="java.lang.String" value="Veuillez chosiir un fichier &#xe0; imprimer"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFileChooserFichierImprimerActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Gestion impressions"/>
@@ -27,10 +65,10 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel1" max="32767" attributes="0"/>
-                  <Component id="jPanel2" max="32767" attributes="0"/>
-                  <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanelFichierImprimer" max="32767" attributes="0"/>
+                  <Component id="jPanelOptionImpression" max="32767" attributes="0"/>
+                  <Component id="jPanelImpressionsPlanifiees" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanelPrixImpression" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -40,20 +78,20 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="jPanelFichierImprimer" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <Component id="jPanelOptionImpression" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+              <Component id="jPanelImpressionsPlanifiees" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel6" max="32767" attributes="0"/>
+              <Component id="jPanelPrixImpression" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="jPanelFichierImprimer">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -73,9 +111,9 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabelNomFichier" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField1" max="32767" attributes="0"/>
+                  <Component id="jTextFieldNom" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonParcourir" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -84,8 +122,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabelNomFichier" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldNom" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonParcourir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -96,20 +134,23 @@
             <Property name="text" type="java.lang.String" value="Nom du fichier :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="jTextFieldNom">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jButtonParcourir">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parcourir..."/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonParcourirActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanel2">
+    <Container class="javax.swing.JPanel" name="jPanelOptionImpression">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -127,9 +168,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jPanel4" max="32767" attributes="0"/>
+                  <Component id="jPanelOptionImpressionGauche" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanelOptionImpressionDroite" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -139,8 +180,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel3" max="32767" attributes="0"/>
-                      <Component id="jPanel4" max="32767" attributes="0"/>
+                      <Component id="jPanelOptionImpressionGauche" max="32767" attributes="0"/>
+                      <Component id="jPanelOptionImpressionDroite" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -148,7 +189,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel3">
+        <Container class="javax.swing.JPanel" name="jPanelOptionImpressionGauche">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -163,15 +204,20 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelNbCopies" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelFormat" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCheckBoxRecto" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelNbCopies" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelFormat" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jComboBoxFormat" max="32767" attributes="0"/>
+                                  <Component id="jSpinnerNbCopies" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="95" max="32767" attributes="0"/>
+                      <EmptySpace pref="72" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -181,14 +227,16 @@
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelNbCopies" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jSpinnerNbCopies" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabelFormat" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxFormat" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jCheckBoxRecto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -199,14 +247,19 @@
                 <Property name="text" type="java.lang.String" value="Nb de copies"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JSpinner" name="jSpinner1">
+            <Component class="javax.swing.JSpinner" name="jSpinnerNbCopies">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[70, 25]"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelFormat">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Format"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="jComboBoxFormat">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -221,9 +274,14 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
+            <Component class="javax.swing.JCheckBox" name="jCheckBoxRecto">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Recto/Verso"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel4">
+        <Container class="javax.swing.JPanel" name="jPanelOptionImpressionDroite">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -235,19 +293,77 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jRadioButtonNoir" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jRadioButtonCouleur" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabelQualite" alignment="0" pref="98" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="jRadioButtonNoir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jRadioButtonCouleur" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelQualite" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonNoir">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Noir et Blanc"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonNoirActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButtonCouleur">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Couleur"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonCouleurActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelQualite">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Qualit&#xe9; du papier"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBox1">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Economique"/>
+                    <StringItem index="1" value="Photo"/>
+                    <StringItem index="2" value="Glac&#xe9;"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanel5">
+    <Container class="javax.swing.JPanel" name="jPanelImpressionsPlanifiees">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -263,17 +379,80 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="478" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jButtonAjouter" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButtonModifier" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButtonSupprimer" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="180" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButtonAjouter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonModifier" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonSupprimer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" pref="139" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="jButtonAjouter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ajouter"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAjouterActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonModifier">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modifier"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonSupprimer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Supprimer"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSupprimerActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextAreaImpressionPlanifiees">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="focusable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanel6">
+    <Container class="javax.swing.JPanel" name="jPanelPrixImpression">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -289,15 +468,42 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextAreaPrixImpressionPlanifiees">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="focusable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>

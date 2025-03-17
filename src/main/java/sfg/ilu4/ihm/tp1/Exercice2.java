@@ -4,6 +4,8 @@
  */
 package sfg.ilu4.ihm.tp1;
 
+import javax.swing.JDialog;
+
 /**
  *
  * @author FRS4440A
@@ -26,150 +28,290 @@ public class Exercice2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jDialogFileChooser = new javax.swing.JDialog();
+        jFileChooserFichierImprimer = new javax.swing.JFileChooser();
+        jPanelFichierImprimer = new javax.swing.JPanel();
         jLabelNomFichier = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jTextFieldNom = new javax.swing.JTextField();
+        jButtonParcourir = new javax.swing.JButton();
+        jPanelOptionImpression = new javax.swing.JPanel();
+        jPanelOptionImpressionGauche = new javax.swing.JPanel();
         jLabelNbCopies = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        jSpinnerNbCopies = new javax.swing.JSpinner();
         jLabelFormat = new javax.swing.JLabel();
+        jComboBoxFormat = new javax.swing.JComboBox<>();
+        jCheckBoxRecto = new javax.swing.JCheckBox();
+        jPanelOptionImpressionDroite = new javax.swing.JPanel();
+        jRadioButtonNoir = new javax.swing.JRadioButton();
+        jRadioButtonCouleur = new javax.swing.JRadioButton();
+        jLabelQualite = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        jPanelImpressionsPlanifiees = new javax.swing.JPanel();
+        jButtonAjouter = new javax.swing.JButton();
+        jButtonModifier = new javax.swing.JButton();
+        jButtonSupprimer = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaImpressionPlanifiees = new javax.swing.JTextArea();
+        jPanelPrixImpression = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaPrixImpressionPlanifiees = new javax.swing.JTextArea();
+
+        jDialogFileChooser.setMinimumSize(new java.awt.Dimension(598, 347));
+
+        jFileChooserFichierImprimer.setDialogTitle("Veuillez chosiir un fichier à imprimer");
+        jFileChooserFichierImprimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFileChooserFichierImprimerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialogFileChooserLayout = new javax.swing.GroupLayout(jDialogFileChooser.getContentPane());
+        jDialogFileChooser.getContentPane().setLayout(jDialogFileChooserLayout);
+        jDialogFileChooserLayout.setHorizontalGroup(
+            jDialogFileChooserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogFileChooserLayout.createSequentialGroup()
+                .addComponent(jFileChooserFichierImprimer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jDialogFileChooserLayout.setVerticalGroup(
+            jDialogFileChooserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogFileChooserLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jFileChooserFichierImprimer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestion impressions");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(null), "Fichier à imprimer"));
+        jPanelFichierImprimer.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Fichier à imprimer"));
 
         jLabelNomFichier.setText("Nom du fichier :");
 
-        jTextField1.setEditable(false);
-        jTextField1.setFocusable(false);
+        jTextFieldNom.setEditable(false);
+        jTextFieldNom.setFocusable(false);
 
-        jButton1.setText("Parcourir...");
+        jButtonParcourir.setText("Parcourir...");
+        jButtonParcourir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonParcourirActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelFichierImprimerLayout = new javax.swing.GroupLayout(jPanelFichierImprimer);
+        jPanelFichierImprimer.setLayout(jPanelFichierImprimerLayout);
+        jPanelFichierImprimerLayout.setHorizontalGroup(
+            jPanelFichierImprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichierImprimerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelNomFichier)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1)
+                .addComponent(jTextFieldNom)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(jButtonParcourir)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanelFichierImprimerLayout.setVerticalGroup(
+            jPanelFichierImprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFichierImprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabelNomFichier)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jButton1))
+                .addComponent(jTextFieldNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonParcourir))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(null), "Options d'impression"));
+        jPanelOptionImpression.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Options d'impression"));
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        jPanelOptionImpressionGauche.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabelNbCopies.setText("Nb de copies");
 
+        jSpinnerNbCopies.setPreferredSize(new java.awt.Dimension(70, 25));
+
         jLabelFormat.setText("Format");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A3", "A4", "A5", "A6" }));
+        jComboBoxFormat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A3", "A4", "A5", "A6" }));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        jCheckBoxRecto.setText("Recto/Verso");
+
+        javax.swing.GroupLayout jPanelOptionImpressionGaucheLayout = new javax.swing.GroupLayout(jPanelOptionImpressionGauche);
+        jPanelOptionImpressionGauche.setLayout(jPanelOptionImpressionGaucheLayout);
+        jPanelOptionImpressionGaucheLayout.setHorizontalGroup(
+            jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOptionImpressionGaucheLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelNbCopies)
-                    .addComponent(jLabelFormat))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addGroup(jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBoxRecto)
+                    .addGroup(jPanelOptionImpressionGaucheLayout.createSequentialGroup()
+                        .addGroup(jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelNbCopies)
+                            .addComponent(jLabelFormat))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jComboBoxFormat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSpinnerNbCopies, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        jPanelOptionImpressionGaucheLayout.setVerticalGroup(
+            jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOptionImpressionGaucheLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNbCopies)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSpinnerNbCopies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelOptionImpressionGaucheLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelFormat)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(53, Short.MAX_VALUE))
+                    .addComponent(jComboBoxFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBoxRecto)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        jPanelOptionImpressionDroite.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jRadioButtonNoir.setText("Noir et Blanc");
+        jRadioButtonNoir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonNoirActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jRadioButtonCouleur.setText("Couleur");
+        jRadioButtonCouleur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonCouleurActionPerformed(evt);
+            }
+        });
+
+        jLabelQualite.setText("Qualité du papier");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Economique", "Photo", "Glacé" }));
+
+        javax.swing.GroupLayout jPanelOptionImpressionDroiteLayout = new javax.swing.GroupLayout(jPanelOptionImpressionDroite);
+        jPanelOptionImpressionDroite.setLayout(jPanelOptionImpressionDroiteLayout);
+        jPanelOptionImpressionDroiteLayout.setHorizontalGroup(
+            jPanelOptionImpressionDroiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOptionImpressionDroiteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelOptionImpressionDroiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jRadioButtonNoir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jRadioButtonCouleur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelQualite, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jPanelOptionImpressionDroiteLayout.setVerticalGroup(
+            jPanelOptionImpressionDroiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOptionImpressionDroiteLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jRadioButtonNoir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonCouleur)
+                .addGap(12, 12, 12)
+                .addGroup(jPanelOptionImpressionDroiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelQualite, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanelOptionImpressionLayout = new javax.swing.GroupLayout(jPanelOptionImpression);
+        jPanelOptionImpression.setLayout(jPanelOptionImpressionLayout);
+        jPanelOptionImpressionLayout.setHorizontalGroup(
+            jPanelOptionImpressionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOptionImpressionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanelOptionImpressionGauche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelOptionImpressionDroite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanelOptionImpressionLayout.setVerticalGroup(
+            jPanelOptionImpressionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOptionImpressionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelOptionImpressionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelOptionImpressionGauche, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelOptionImpressionDroite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(null), "Impressions planifiées"));
+        jPanelImpressionsPlanifiees.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Impressions planifiées"));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
+        jButtonAjouter.setText("Ajouter");
+        jButtonAjouter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAjouterActionPerformed(evt);
+            }
+        });
+
+        jButtonModifier.setText("Modifier");
+
+        jButtonSupprimer.setText("Supprimer");
+        jButtonSupprimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSupprimerActionPerformed(evt);
+            }
+        });
+
+        jTextAreaImpressionPlanifiees.setEditable(false);
+        jTextAreaImpressionPlanifiees.setColumns(20);
+        jTextAreaImpressionPlanifiees.setRows(5);
+        jTextAreaImpressionPlanifiees.setFocusable(false);
+        jScrollPane1.setViewportView(jTextAreaImpressionPlanifiees);
+
+        javax.swing.GroupLayout jPanelImpressionsPlanifieesLayout = new javax.swing.GroupLayout(jPanelImpressionsPlanifiees);
+        jPanelImpressionsPlanifiees.setLayout(jPanelImpressionsPlanifieesLayout);
+        jPanelImpressionsPlanifieesLayout.setHorizontalGroup(
+            jPanelImpressionsPlanifieesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelImpressionsPlanifieesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonAjouter)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonModifier)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonSupprimer)
+                .addGap(110, 110, 110))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelImpressionsPlanifieesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 180, Short.MAX_VALUE)
+        jPanelImpressionsPlanifieesLayout.setVerticalGroup(
+            jPanelImpressionsPlanifieesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelImpressionsPlanifieesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelImpressionsPlanifieesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAjouter)
+                    .addComponent(jButtonModifier)
+                    .addComponent(jButtonSupprimer))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(null), "Prix des impressions planifiées"));
+        jPanelPrixImpression.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Prix des impressions planifiées"));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        jTextAreaPrixImpressionPlanifiees.setEditable(false);
+        jTextAreaPrixImpressionPlanifiees.setColumns(20);
+        jTextAreaPrixImpressionPlanifiees.setRows(5);
+        jTextAreaPrixImpressionPlanifiees.setFocusable(false);
+        jScrollPane2.setViewportView(jTextAreaPrixImpressionPlanifiees);
+
+        javax.swing.GroupLayout jPanelPrixImpressionLayout = new javax.swing.GroupLayout(jPanelPrixImpression);
+        jPanelPrixImpression.setLayout(jPanelPrixImpressionLayout);
+        jPanelPrixImpressionLayout.setHorizontalGroup(
+            jPanelPrixImpressionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelPrixImpressionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 25, Short.MAX_VALUE)
+        jPanelPrixImpressionLayout.setVerticalGroup(
+            jPanelPrixImpressionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPrixImpressionLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,28 +321,56 @@ public class Exercice2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanelFichierImprimer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelOptionImpression, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelImpressionsPlanifiees, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelPrixImpression, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelFichierImprimer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelOptionImpression, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelImpressionsPlanifiees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanelPrixImpression, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAjouterActionPerformed
+
+    private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSupprimerActionPerformed
+
+    private void jButtonParcourirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonParcourirActionPerformed
+        jDialogFileChooser.setVisible(true);
+    }//GEN-LAST:event_jButtonParcourirActionPerformed
+
+    private void jFileChooserFichierImprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileChooserFichierImprimerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFileChooserFichierImprimerActionPerformed
+
+    private void jRadioButtonNoirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNoirActionPerformed
+        if (jRadioButtonCouleur.isSelected()){
+            jRadioButtonCouleur.setSelected(false);
+        }
+    }//GEN-LAST:event_jRadioButtonNoirActionPerformed
+
+    private void jRadioButtonCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCouleurActionPerformed
+        if (jRadioButtonNoir.isSelected()){
+            jRadioButtonNoir.setSelected(false);
+        }
+    }//GEN-LAST:event_jRadioButtonCouleurActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,18 +408,32 @@ public class Exercice2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAjouter;
+    private javax.swing.JButton jButtonModifier;
+    private javax.swing.JButton jButtonParcourir;
+    private javax.swing.JButton jButtonSupprimer;
+    private javax.swing.JCheckBox jCheckBoxRecto;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBoxFormat;
+    private javax.swing.JDialog jDialogFileChooser;
+    private javax.swing.JFileChooser jFileChooserFichierImprimer;
     private javax.swing.JLabel jLabelFormat;
     private javax.swing.JLabel jLabelNbCopies;
     private javax.swing.JLabel jLabelNomFichier;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabelQualite;
+    private javax.swing.JPanel jPanelFichierImprimer;
+    private javax.swing.JPanel jPanelImpressionsPlanifiees;
+    private javax.swing.JPanel jPanelOptionImpression;
+    private javax.swing.JPanel jPanelOptionImpressionDroite;
+    private javax.swing.JPanel jPanelOptionImpressionGauche;
+    private javax.swing.JPanel jPanelPrixImpression;
+    private javax.swing.JRadioButton jRadioButtonCouleur;
+    private javax.swing.JRadioButton jRadioButtonNoir;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSpinner jSpinnerNbCopies;
+    private javax.swing.JTextArea jTextAreaImpressionPlanifiees;
+    private javax.swing.JTextArea jTextAreaPrixImpressionPlanifiees;
+    private javax.swing.JTextField jTextFieldNom;
     // End of variables declaration//GEN-END:variables
 }
